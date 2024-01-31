@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Notes Consultora S.A</title>
+    <link rel="shortcut icon" href="img/logo_url.png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/187df561b6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- NAVEGADOR -->
+    <nav class="navbar">
+        <div class="navbar_container">
+            <a href="#home" id="navbar_logo">
+                <img src="img/logo_navbar-verde.png" id="logo" class="logo">
+            </a> 
+            <div class="navbar_toggle" id="menu-mobile">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="navbar_menu">
+                <li class="navbar_item">
+                    <a href="#about" class="navbar_links" id="about-page">NOSOTROS</a>
+                </li>
+                <li class="navbar_item">
+                    <a href="#services" class="navbar_links" id="services-page">SERVICIOS</a>
+                </li>
+                <li class="navbar_btn">
+                    <a href="#footer" class="button" id="contact">CONTACTANOS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <div class="main" id="home">
+        <div class="main_container">
+            <div class="main_content">
+                <h1> Soluciones integrales tecnológicas en el campo impositivo, 
+                    contable y societario de tu empresa.</h1>
+                <p> Toda problemática es un camino que recorremos juntos a nuestros clientes. </p>
+                <button class="main_btn">
+                    <a href="#about">CONOCENOS</a>
+                </button>
+            </div>
+            <div class="main_img-container">
+                <img src="img/main_1.svg" alt="" id="main_img">
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <div class="about" id="about">
+        <div class="about_container">
+            <div class="about_content">
+                <h1>¿Quiénes somos?</h1>
+                <h2> Somos una joven empresa dedicada a brindar un asesoramiento integral a las distintas 
+                    problemáticas que surgen en el campo impositivo, contable y societario.</h2>
+                <p> Además, contamos con una unidad de negocio especializada en brindar soluciones 
+                    de Recaudación Tributaria a entes gubernamentales.</p>
+            </div>
+            <div class="about_img-container">
+                <div class="about_img-card">
+                    <img src="img/about_1.svg" alt="" class="about_img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SERVICES -->
+    <div class="services" id="services">
+        <h1>Nuestros servicios.</h1>
+        <div class="services_wrapper">
+            <div class="services_card">
+                <img src="/img/servicio_2.svg" class="service_img">
+                <p>Asesoramiento impositivo contable y societario</p>
+            </div>
+            <div class="services_card">
+                <img src="img/servicio_3.svg" class="service_img">
+                <p>Soluciones tecnológicas a la empresa</p>
+            </div>
+            <div class="services_card  row-2">
+                <img src="/img/servicio_4.svg" class="service_img">
+                <p> Servicios de outsourcing</p>
+            </div>
+            <div class="services_card row-2">
+                <img src="/img/servicio_5.svg" class="service_img">
+                <p>Asesoramiento gubernamental</p>
+            </div> 
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer_container">
+            <div class="contact box">
+                <h2>Contactanos.</h2>
+                <form id="form" onsubmit="event.preventDefault(); return sendMail();" method="POST">
+                    <input type="text" name="name" id="fullName" placeholder="Nombre y Apellido" autocomplete="off" onfocusout="validateName()">
+                    <span id="name-error"></span>
+
+                    <input type="email" name="email" id="email" placeholder="Email" autocomplete="off" onfocusout="validateEmail()">
+                    <span id="email-error"></span>
+
+                    <textarea id="message" name="message" rows="10" cols="30" placeholder="¿Cómo podemos ayudarte?" autocomplete="off" oninput="validateMessage()"></textarea>
+                    <span id="message-error"></span>
+
+                    <button type="submit" id="formBtn">ENVIAR</button>
+                    <span id="submit-error"></span>
+
+                </form>
+            </div>
+
+            <div class="information box">
+                <div class="footer_content-info">
+                    <h2> donde estamos </h2>
+                    <div class="info_box">
+                        <span class="fas fa-map-marker-alt"></span>
+                        <span class="text"> Miro 260 6A, CABA</span>
+                    </div>
+                    <div class="info_box">
+                        <span class="fas fa-phone-alt"></span>
+                        <span class="text"> +54 9 11 6800-8429</span>
+                    </div>
+                    <div class="info_box">
+                        <span class="fas fa-envelope"></span>
+                        <span class="text"> taxnotes@gmail.com</span>
+                    </div>
+                </div>
+                <div class="footer_content-social">
+                    <div class="social">
+                        <h2>Seguínos</h2>
+                        <a href="#">
+                            <span class="fab fa-facebook-f"></span>
+                            <span class="fab fa-twitter"></span>
+                            <span class="fab fa-instagram"></span>
+                            <span class="fab fa-linkedin"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="app.js"></script>
+
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("WMQUG3C-q6q2D1-65");
+   })();
+</script>
+</body>
+</html>

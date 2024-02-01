@@ -164,7 +164,7 @@ function sendMail() {
     };
 
     // Envía el correo electrónico usando emailjs
-    emailjs.send("service_qirv3fx", "template_3k0uewv", params)
+    emailjs.send("service_ea16uhu", "template_3k0uewv", params)
         .then(function (res) {
             // Éxito: Restaura el botón y proporciona feedback visual
             formBtn.disabled = false;
